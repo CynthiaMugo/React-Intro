@@ -10,9 +10,16 @@ import { Component1, Component2 } from './Exports/NamedExports';
 // combined imports
 import MainComponent, {C1, C2} from './Exports/CombinedExports';
 
+//import AllData
+import AllData from './DisplayData/AllData';
+//impoort ObjData
+import ObjData from './DisplayData/ObjData';
+//import data with map method
+import ArrayData from './DisplayData/ArrayData';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <TestComponent></TestComponent>
+    {/* <TestComponent></TestComponent>
     <TestComponent/>
     <TestParagraph></TestParagraph>
     <TestParagraph/>
@@ -20,7 +27,10 @@ createRoot(document.getElementById('root')).render(
     <Component2 />
     <MainComponent/>
     <C1/>
-    <C2/>
+    <C2/> */}
+    <AllData/>
+    <ObjData/>
+    <ArrayData/>
   </StrictMode>,
 );
 
