@@ -16,6 +16,8 @@ import AllData from './DisplayData/AllData';
 import ObjData from './DisplayData/ObjData';
 //import data with map method
 import ArrayData from './DisplayData/ArrayData';
+//import parentcomponent that uses props
+import ParentComponent from './Props/PrimitiveData';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,9 +30,10 @@ createRoot(document.getElementById('root')).render(
     <MainComponent/>
     <C1/>
     <C2/> */}
-    <AllData/>
+    {/* <AllData/>
     <ObjData/>
-    <ArrayData/>
+    <ArrayData/> */}
+    <ParentComponent />
   </StrictMode>,
 );
 
