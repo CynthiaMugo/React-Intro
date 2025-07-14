@@ -19,7 +19,9 @@ import ArrayData from './DisplayData/ArrayData';
 //import parentcomponent that uses props
 import ParentComponent from './Props/PrimitiveData';
 
-import ComponentA from './MiniProject';
+import MiniProject from './MiniProject/index.jsx';
+// import css
+import './css.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -36,7 +38,7 @@ createRoot(document.getElementById('root')).render(
     <ObjData/>
     <ArrayData/> */}
     {/* <ParentComponent /> */}
-    <ComponentA />
+    <MiniProject />
   </StrictMode>,
 );
 

@@ -2,7 +2,7 @@ import ComponentE from "./ComponentE";
 import ComponentD from "./ComponentD";
 function ComponentC() {
     return (
-        <div>
+        <div className="border-container component-c-container">
             <ComponentD />
             <ComponentE />
         </div>
