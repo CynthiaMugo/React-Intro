@@ -3,7 +3,8 @@ function ComponentB() {
         <div className="border-container" style={{
             backgroundColor: "rgba(0, 0, 0, 0.3)",
             textAlign: "center",
-            fontSize: "30px"
+            fontSize: "30px",
+            borderRadius: "10px",
         }}>
             <h2>My Blog</h2>
         </div>

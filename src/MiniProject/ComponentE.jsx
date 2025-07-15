@@ -16,7 +16,7 @@ function ComponentE() {
         const {text1, text2} = props;
         return (
             <div style={{
-                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
                 padding: "20px",
                 borderRadius: "15px",
                 margin: "20px"
