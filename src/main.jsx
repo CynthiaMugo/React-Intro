@@ -30,6 +30,11 @@ import Form from './Events/Form';
 // import SimpleState component
 import SimpleState from './Hooks/State/SimpleState';
 
+// import destructured state
+import SimpleState2 from './Hooks/State/SimpleState2';
+//import form state
+import FormState from './Hooks/State/FormState';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <TestComponent></TestComponent>
@@ -46,9 +51,11 @@ createRoot(document.getElementById('root')).render(
     <ArrayData/> */}
     {/* <ParentComponent /> */}
     {/* <MiniProject /> */}
-    <Buttons />
-    <Form />
+    {/* <Buttons />
+    <Form /> */}
     <SimpleState />
+    <SimpleState2/>
+    <FormState />
   </StrictMode>,
 );
 
