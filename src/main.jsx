@@ -22,6 +22,13 @@ import ParentComponent from './Props/PrimitiveData';
 import MiniProject from './MiniProject/index.jsx';
 // import css
 import './css.css';
+// import Buttons component
+import Buttons from './Events/Buttons';
+// import Form component
+import Form from './Events/Form';
+
+// import SimpleState component
+import SimpleState from './Hooks/State/SimpleState';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -38,7 +45,10 @@ createRoot(document.getElementById('root')).render(
     <ObjData/>
     <ArrayData/> */}
     {/* <ParentComponent /> */}
-    <MiniProject />
+    {/* <MiniProject /> */}
+    <Buttons />
+    <Form />
+    <SimpleState />
   </StrictMode>,
 );
 
