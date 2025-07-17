@@ -54,9 +54,9 @@ createRoot(document.getElementById('root')).render(
     {/* <MiniProject /> */}
     {/* <Buttons />
     <Form /> */}
-    <SimpleState />
-    <SimpleState2/>
-    <FormState />
+    {/* <SimpleState />
+    <SimpleState2/> */}
+    {/* <FormState /> */}
     <SimpleEffect />
   </StrictMode>,
 );

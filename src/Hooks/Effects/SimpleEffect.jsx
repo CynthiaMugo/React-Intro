@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import chickenimg from './../../assets/chicken.jpg';
 function SimpleEffect() {
 
     // useEffect(function, [dependency array])
@@ -8,6 +9,30 @@ function SimpleEffect() {
 
         const [n, setN] = useState(0);
         const [showForm, setShowForm] = useState(false);
+
+        const [chickens, setChickens] = useState([]);
+
+        const [d, setD] = useState();
+        useEffect(() => {
+            let date = new Date();
+            // bug memmory leak
+            setTimeout(() => {
+            setD(date.toISOString());
+            }, 100);
+        }, []);
+
+        useEffect(() => {
+            console.log("useEffect has run")
+            let k = n / 5;
+            k = Math.floor(k);
+
+            let chickenArr = [];
+            for(let i =  0; i < k; i++) {
+                chickenArr.push(i + 1);
+            }
+            console.log(chickenArr);
+            setChickens(chickenArr);
+        }, [n]);
 
         const getStatus = () => {
             if (showForm === true) {
@@ -39,11 +64,26 @@ function SimpleEffect() {
     return (
         <div>
             <h2>Simple Effect</h2>
+            <div>TS:{d}</div>
             <div>
                 <button className="button-style" onClick={decrement}>-</button>
                 <span style={{padding: "10px"}}>{n}</span>
                 <button className="button-style" onClick={increment}>+</button>
                 <div>
+                    <div>
+                        {chickens.map((chicken, index) => {
+                        return (
+                            <img
+                                src={chickenimg}
+                                key={index}
+                                style={{
+                                    width: "100px",
+                                    margin: "10px",
+                                }}
+                                />
+                                );
+                                })}
+                    </div>
                 <button className="button-style" style={{marginTop: "10px"}} onClick={() => {
                         if (showForm === true) {
                             setShowForm(false);
@@ -76,6 +116,24 @@ function MyForm(props) {
 
 function UnMountComponent() {
     let k = 1;
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+        console.log("Mouse position");
+        setPosition({
+            x: event.clientX,
+            y: event.clientY,
+        });
+        };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+    }, []);
+
   useEffect(() => {
     console.log("Show Form has been Mounted");
 
@@ -95,8 +153,8 @@ function UnMountComponent() {
     <div>
       <h1>Unmount Component</h1>
       <div>
-        <p>X Axios</p>
-        <p>X Axios</p>
+        <p>X Axios {position.x}</p>
+        <p>X Axios {position.y}</p>
       </div>
     </div>
   );
