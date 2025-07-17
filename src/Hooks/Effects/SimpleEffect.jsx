@@ -75,16 +75,29 @@ function MyForm(props) {
 }
 
 function UnMountComponent() {
+    let k = 1;
   useEffect(() => {
     console.log("Show Form has been Mounted");
 
+    //kill interval
+    let interval = setInterval(() => {
+        console.log("K is", k);
+        k = k + 1
+    }, 1000);
+
+    // Cleanup function
     return () => {
       console.log("Component Unmounted");
+        clearInterval(interval);
     };
   }, []);
   return (
     <div>
       <h1>Unmount Component</h1>
+      <div>
+        <p>X Axios</p>
+        <p>X Axios</p>
+      </div>
     </div>
   );
 }
