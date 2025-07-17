@@ -3,9 +3,13 @@ import React, { useState } from 'react';
 function FormState() {
     //usestate
     const [radius, setRadius] = useState(0);
+
+    console.log("Form state render")
+
     function areaOfCircle(radius) {
         return Math.PI * radius * radius;
     }
+    
     const updateRadiusValue = (e) => {
         //console.log(e.target.value);
         setRadius(e.target.value);
@@ -25,8 +29,15 @@ function FormState() {
     );
 }
 
+function TestComponent() {
+        console.log("TestComponent Render");
+        return <div>Test Component</div>;
+    }
+
 function Circle(props) {
     const { radius } = props;
+
+    console.log("Circle Component Render")
 
     const getSize = (radius) => {
         let r = parseInt(radius);
@@ -58,9 +69,9 @@ function Circle(props) {
                 alignItems: "center"
 
         }}>
-            <span style={{ fontSize: getTextSize(radius) }}>
+        <span style={{ fontSize: getTextSize(radius) }}>
                 r={parseInt(radius)}
-      </span>
+        </span>
         </div>
     );
 

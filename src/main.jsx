@@ -34,6 +34,7 @@ import SimpleState from './Hooks/State/SimpleState';
 import SimpleState2 from './Hooks/State/SimpleState2';
 //import form state
 import FormState from './Hooks/State/FormState';
+import SimpleEffect from './Hooks/Effects/SimpleEffect';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -56,6 +57,7 @@ createRoot(document.getElementById('root')).render(
     <SimpleState />
     <SimpleState2/>
     <FormState />
+    <SimpleEffect />
   </StrictMode>,
 );
 
