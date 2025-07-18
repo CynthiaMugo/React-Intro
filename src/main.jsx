@@ -36,6 +36,10 @@ import SimpleState2 from './Hooks/State/SimpleState2';
 import FormState from './Hooks/State/FormState';
 import SimpleEffect from './Hooks/Effects/SimpleEffect';
 
+//importing bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ManualRoute from './Routing/ManualRoutes/index.jsx';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <TestComponent></TestComponent>
@@ -57,7 +61,9 @@ createRoot(document.getElementById('root')).render(
     {/* <SimpleState />
     <SimpleState2/> */}
     {/* <FormState /> */}
-    <SimpleEffect />
+    {/* <SimpleEffect /> */}
+    <ManualRoute />
+
   </StrictMode>,
 );
 
