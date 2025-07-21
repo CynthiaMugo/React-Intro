@@ -40,6 +40,7 @@ import SimpleEffect from './Hooks/Effects/SimpleEffect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ManualRoute from './Routing/ManualRoutes/index.jsx';
 import Dashboard from './Routing/ReactRouter/DashBoard.jsx';
+import ReactRouter from './Routing/ReactRouter/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -64,7 +65,8 @@ createRoot(document.getElementById('root')).render(
     {/* <FormState /> */}
     {/* <SimpleEffect /> */}
     {/* <ManualRoute /> */}
-    <Dashboard />
+    {/* <Dashboard /> */}
+    <ReactRouter/>
   </StrictMode>,
 );
 
